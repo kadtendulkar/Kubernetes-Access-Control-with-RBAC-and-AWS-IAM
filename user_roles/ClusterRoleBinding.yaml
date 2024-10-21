@@ -1,0 +1,12 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: cluster-role-binding-kad
+subjects:
+  - kind: User
+    name: kad-with-no-power
+    apiGroup: rbac.authorization.k8s.io
+roleRef:
+    kind: ClusterRole
+    name: kad-role
+    apiGroup: rbac.authorization.k8s.io
